@@ -23,7 +23,7 @@ namespace NMG.Core.TextFormatter
             var result = RemovePrefix(text);
 
             // Cannot have class or property with not allowed chars
-            result = result.Replace("%", "").Replace("á", "a").Replace("é", "e").Replace("í", "i").Replace("ó", "o").Replace("ú", "u");
+            result = result.Replace("%", "").Replace("Ã¡", "a").Replace("Ã©", "e").Replace("Ã­", "i").Replace("Ã³", "o").Replace("Ãº", "u");
 
             // Split by capitals to preserve pascal/camelcasing in original text value. Preserves TLAs. See http://stackoverflow.com/a/1098039
             result = Regex.Replace(result, "((?<=[a-z])[A-Z]|[A-Z](?=[a-z]))", " $1").Trim();
